@@ -366,3 +366,54 @@
   }
 
   /* table */
+
+
+  /* course */
+
+  .add_clan {
+    width: 70%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  .add_clan_title {
+    margin-bottom: 20px;
+    color: #3C91E6;
+  }
+
+  .addclan_input input {
+    width: 100%;
+    padding: 12px 0;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+    outline: none;
+  }
+
+  .add_clan_btn {
+    margin-top: 10px;
+  }
+
+  .add_clan_btn button {
+    padding: 9px 40px;
+    background-color: #3C91E6;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .addclan_select {
+    width: 100%;
+    padding: 12px 0;
+    padding-left: 10px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .not_found {
+    width: 100%;
+  }

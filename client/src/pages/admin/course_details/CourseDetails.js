@@ -19,12 +19,21 @@ const CourseDetails = () => {
             console.log(error)
         }
     }
+
+    const deleteCourseDetails = async (id) => {
+        try {
+            await axios.delete(`${PORT}deleteCourse/${id}`);
+            fetchCourseDetails();
+        } catch (error) {
+            console.error("Error deleting clan:", error);
+        }
+    }
     return (
         <>
             <section id="content">
                 <main>
                     <div className="head-title" style={{ float: "right", marginBottom: "15px" }}>
-                        <NavLink to="/Addstudent" className="btn-download" >
+                        <NavLink to="/addcoursedetails" className="btn-download" >
                             <i className="bx bx-plus"></i>
                             <span className="text">Add Course</span>
                         </NavLink>
@@ -51,7 +60,13 @@ const CourseDetails = () => {
                                         <td>{data.description}</td>
                                         <td>{data.fees}</td>
                                         <td>{data.duration}</td>
-                                        <td className='clan_handle'><Delete /></td>
+                                        <td className='clan_handle'>
+                                            <Delete onDelete={() => deleteCourseDetails(data.id)} />
+                                            <NavLink to="/editecoursedetails" state={{ id: data.id }}>
+                                                <button style={{ backgroundColor: "#3C91E6" }}><i className="fa-solid fa-pen-to-square"></i></button>
+                                            </NavLink>
+
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
